@@ -197,8 +197,8 @@ function Task({ referrals, setReferrals }) {
 
             {address && (
               <button
-                className={`bg-button-gradient  hover:bg-button-hover rounded-lg px-4 py-5 font-bold text-black focus:outline-none ${
-                  taskCompleted ? "!bg-button-hover" : null
+                className={`rounded-lg bg-white px-4 py-5 font-bold text-black shadow-2xl focus:outline-none ${
+                  taskCompleted ? "bg-transparent shadow-none" : null
                 }`}
                 type="button"
                 onClick={handleMarkAsCompleted}

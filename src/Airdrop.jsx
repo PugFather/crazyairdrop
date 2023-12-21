@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import { useConnection, useWallet } from "@solana/wallet-adapter-react";
+// import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 
-import Logo from "./assets/logo.png";
+import Logo from "./assets/logo2.png";
 import Task from "./components/Task";
 import Invite from "./components/Invite";
 import ReferralList from "./components/ReferralList";
@@ -10,8 +10,8 @@ import ReferralList from "./components/ReferralList";
 import supabase from "./supabase";
 
 function App() {
-  const { connection } = useConnection();
-  const { publicKey, sendTransaction } = useWallet();
+  // const { connection } = useConnection();
+  // const { publicKey, sendTransaction } = useWallet();
 
   const [referrals, setReferrals] = useState([]);
 
@@ -35,10 +35,10 @@ function App() {
     <>
       {/* <WalletMultiButton /> */}
       <header>
-        <nav className="bg-cyan h-24">
-          <div className="container mx-auto flex h-24 items-center justify-between">
+        <nav className="h-24">
+          <div className="container mx-auto flex h-24 items-center justify-between px-5">
             <a href="/">
-              <img src={Logo} alt="logo" className="h-12" />
+              <img src={Logo} alt="logo" className="h-full max-h-20" />
             </a>
 
             <WalletMultiButton />
@@ -46,7 +46,7 @@ function App() {
         </nav>
       </header>
 
-      <div className="container mx-auto my-16 p-10 font-extrabold text-white lg:p-0">
+      <div className="container mx-auto mb-20 mt-16 px-8 font-extrabold text-white lg:p-0">
         <h3 className="text-2xl">Complete tasks and get</h3>
         <h1 className="mt-2.5 bg-clip-text text-5xl leading-tight">
           CrazyFrog Airdrop on Solana

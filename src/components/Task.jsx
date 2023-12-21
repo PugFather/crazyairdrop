@@ -9,8 +9,6 @@ import supabase from "../supabase";
 const referredBy = new URLSearchParams(window.location.search).get("ref");
 
 function Task({ referrals, setReferrals }) {
-  // const address = useAddress();
-  // const connectMetamask = useMetamask();
   const { publicKey } = useWallet();
   const address = publicKey?.toBase58();
 
@@ -130,17 +128,17 @@ function Task({ referrals, setReferrals }) {
   }, [referrals, address]);
 
   return (
-    <div className="container mx-auto my-16  p-10 md:p-0">
-      <div className="flex flex-col items-center md:flex-row">
-        <div className="mb-16 flex items-center justify-center md:mb-0 md:w-1/2">
+    <div className="container mx-auto mb-16  px-8 md:p-0">
+      <div className="flex flex-col items-center gap-8 md:flex-row">
+        <div className="flex items-center justify-center md:w-1/2 md:items-stretch">
           <img
             src={Image}
             alt="Task"
-            className="mr-4 items-center justify-center"
+            className="h-full items-center justify-center"
           />
         </div>
 
-        <div className="md:w-1/2">
+        <div className="w-full md:w-1/2">
           <form className="flex flex-col rounded-lg border-4  p-6">
             <label className="mb-2 text-lg font-bold  text-blue-600 underline">
               <a href="https:twitter.com" target="_blanck">
@@ -209,8 +207,8 @@ function Task({ referrals, setReferrals }) {
                 {submitting
                   ? "submitting..."
                   : taskCompleted
-                  ? "Task Submitted"
-                  : "Submit Task"}
+                    ? "Task Submitted"
+                    : "Submit Task"}
               </button>
             )}
 

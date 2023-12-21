@@ -43,12 +43,7 @@ function Invite() {
   return (
     <>
       {/* INVITE FRIEND */}
-      <div className="container mx-auto mt-8 rounded-lg bg-[#546283] p-10 shadow-md">
-        <div className="mb-7 flex flex-col">
-          <div className="bg-success flex h-10 w-10 items-center justify-center  rounded-lg">
-            {/* <img src={link} alt="check" /> */}
-          </div>
-        </div>
+      <div className="container mx-auto mt-8 rounded-lg bg-[#546283] p-8 shadow-md">
         <h2 className="mb-2 text-2xl font-semibold">Invite Friends</h2>
         <p className="mb-4 font-extrabold text-white">
           Total Points: <span className="">{points}</span>
@@ -75,7 +70,7 @@ function Invite() {
                   setCopySuccess(true);
                   setTimeout(() => {
                     setCopySuccess(false);
-                  }, 3000);
+                  }, 1000);
                 }}
               >
                 {copySuccess ? "Copied!" : "Copy Link"}

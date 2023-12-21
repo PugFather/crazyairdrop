@@ -2,13 +2,15 @@ import { useState, useEffect } from "react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { useWallet } from "@solana/wallet-adapter-react";
 
-import Image from "../assets/crazyfrog1.png";
+import Image from "../assets/crazyfrog.png";
 
 import supabase from "../supabase";
 
 const referredBy = new URLSearchParams(window.location.search).get("ref");
 
 function Task({ referrals, setReferrals }) {
+  // const address = useAddress();
+  // const connectMetamask = useMetamask();
   const { publicKey } = useWallet();
   const address = publicKey?.toBase58();
 
@@ -207,8 +209,8 @@ function Task({ referrals, setReferrals }) {
                 {submitting
                   ? "submitting..."
                   : taskCompleted
-                    ? "Task Submitted"
-                    : "Submit Task"}
+                  ? "Task Submitted"
+                  : "Submit Task"}
               </button>
             )}
 

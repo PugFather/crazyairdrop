@@ -1,38 +1,39 @@
 import { useMemo } from "react";
-import { clusterApiUrl } from "@solana/web3.js";
-import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
+import Airdrop from "./Airdrop";
+
+import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import {
-  LedgerWalletAdapter,
+  CoinbaseWalletAdapter,
   PhantomWalletAdapter,
-  SolflareWalletAdapter,
   TorusWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
+import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 import {
   ConnectionProvider,
   WalletProvider,
 } from "@solana/wallet-adapter-react";
-import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
+import { clusterApiUrl } from "@solana/web3.js";
 
-import Airdrop from "./pages/Airdrop";
+import("@solana/wallet-adapter-react-ui/styles.css");
 
-function App() {
-  // you can use Mainnet, Devnet or Testnet here
-  const solNetwork = WalletAdapterNetwork.Mainnet;
-  const endpoint = useMemo(() => clusterApiUrl(solNetwork), [solNetwork]);
-  // initialise all the wallets you want to use
+export default function WalletAdapter() {
+  // Add adapters to list of supported wallets
   const wallets = useMemo(
     () => [
+      new CoinbaseWalletAdapter(),
       new PhantomWalletAdapter(),
-      new SolflareWalletAdapter({ solNetwork }),
       new TorusWalletAdapter(),
-      new LedgerWalletAdapter(),
     ],
-    [solNetwork],
+    []
   );
+
+  const network = WalletAdapterNetwork.Mainnet;
+
+  const endpoint = useMemo(() => clusterApiUrl(network), [network]);
 
   return (
     <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={wallets}>
+      <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>
           <Airdrop />
         </WalletModalProvider>
@@ -40,5 +41,3 @@ function App() {
     </ConnectionProvider>
   );
 }
-
-export default App;

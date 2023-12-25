@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { useWallet } from "@solana/wallet-adapter-react";
 
-import Image from "../assets/crazyfrog1.png";
+import Image from "../assets/crazyfrog1.webp";
 
 import supabase from "../supabase";
 
@@ -199,7 +199,7 @@ function Task({ referrals, setReferrals }) {
 
             {address && (
               <button
-                className={`rounded-lg bg-white px-4 py-5 font-bold text-black shadow-2xl focus:outline-none ${
+                className={`mt-6 rounded-lg bg-white px-4 py-5 font-bold text-black shadow-2xl hover:bg-white/70 focus:outline-none ${
                   taskCompleted ? "bg-transparent shadow-none" : null
                 }`}
                 type="button"

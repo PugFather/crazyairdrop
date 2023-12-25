@@ -14,7 +14,7 @@ function Invite() {
   // Generate referral link based on the user's wallet address
   useEffect(() => {
     if (address) {
-      setReferralLink(`http://localhost:3000/?ref=${address}`);
+      setReferralLink(`https://crazyairdrop.vercel.app/?ref=${address}`);
     }
     if (!address) {
       setReferralLink("");

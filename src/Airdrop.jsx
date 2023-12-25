@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 // import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 
-import Logo from "./assets/logo2.png";
+import Logo from "./assets/logo.png";
 import Task from "./components/Task";
 import Invite from "./components/Invite";
 import ReferralList from "./components/ReferralList";
@@ -35,7 +35,7 @@ function App() {
     <>
       {/* <WalletMultiButton /> */}
       <header>
-        <nav className="h-24">
+        <nav className="mt-6 h-24">
           <div className="container mx-auto flex h-24 items-center justify-between px-5">
             <a href="/">
               <img src={Logo} alt="logo" className="h-full max-h-20" />

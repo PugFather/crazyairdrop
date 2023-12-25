@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { useWallet } from "@solana/wallet-adapter-react";
 
-import Image from "../assets/crazyfrog.png";
+import Image from "../assets/crazyfrog1.png";
 
 import supabase from "../supabase";
 
@@ -141,14 +141,14 @@ function Task({ referrals, setReferrals }) {
         <div className="w-full md:w-1/2">
           <form className="flex flex-col rounded-lg border-4  p-6">
             <label className="mb-2 text-lg font-bold  text-blue-600 underline">
-              <a href="https:twitter.com" target="_blanck">
-                Follow on Twitter
+              <a href="https://x.com/CrazyFrog_sol" target="_blanck">
+                Follow on X
               </a>
             </label>
             <input
               className="mb-4 rounded-lg border  px-4 py-4 text-black"
               type="text"
-              placeholder="@username"
+              placeholder="X username"
               name="twitterHandle"
               value={formData.twitterHandle}
               onChange={handleInputChange}
@@ -160,14 +160,14 @@ function Task({ referrals, setReferrals }) {
             )}
 
             <label className="mb-2 text-lg font-bold  text-blue-600 underline">
-              <a href="https:twitter.com" target="_blanck">
-                Retweet
+              <a href="https://x.com/CrazyFrog_sol" target="_blanck">
+                Repost pinned post
               </a>
             </label>
             <input
               className="mb-4 rounded-lg border border-gray-300 px-4 py-4 text-black"
               type="text"
-              placeholder="Retweet link"
+              placeholder="Repost link"
               name="retweetLink"
               value={formData.retweetLink}
               onChange={handleInputChange}
@@ -179,12 +179,14 @@ function Task({ referrals, setReferrals }) {
             )}
 
             <label className="mb-2 text-lg font-bold  text-blue-600 underline">
-              Join Discord
+              <a href="https://t.me/crazyfrog_sol" target="_blanck">
+                Join Telegram
+              </a>
             </label>
             <input
               className="mb-4 rounded-lg border border-gray-300 px-4 py-4 text-black"
               type="text"
-              placeholder="Discord username#1234"
+              placeholder="Telegram username"
               name="discordUsername"
               value={formData.discordUsername}
               onChange={handleInputChange}
@@ -216,9 +218,9 @@ function Task({ referrals, setReferrals }) {
           </form>
         </div>
       </div>
-      <p className="mt-10 text-xl font-normal">
-        NOTE: Make sure to complete all task, we will check before distributing
-        rewards
+      <p className="mt-10 text-xl font-normal text-orange-800">
+        NOTE: Make sure to complete all task, we will check before automatic
+        distribution of rewards.
       </p>
     </div>
   );

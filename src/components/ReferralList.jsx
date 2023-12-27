@@ -1,12 +1,12 @@
 function ReferralList({ referrals }) {
   return (
     <div className="container mx-auto mt-16 overflow-x-auto">
-      <table className="table-auto w-full text-left ">
+      <table className="w-full table-auto text-left ">
         <thead className="bg-cyan">
           <tr>
             <th className="p-6">NO</th>
             <th className="p-6">ADDRESS</th>
-            <th className="p-6">POINTS</th>
+            <th className="p-6">RANK</th>
           </tr>
         </thead>
 

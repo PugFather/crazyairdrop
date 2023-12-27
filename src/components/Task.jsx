@@ -181,6 +181,10 @@ function Task({ referrals, setReferrals }) {
             <label className="mb-2 text-lg font-bold  text-blue-600 underline">
               <a href="https://t.me/crazyfrog_sol" target="_blanck">
                 Join Telegram
+              </a>{" "}
+              <br />
+              <a href="https://t.me/crazyfrogcf" target="_blanck">
+                Join Group
               </a>
             </label>
             <input

@@ -41,7 +41,7 @@ function Task({ referrals, setReferrals }) {
       errors.retweetLink = "Enter a valid retweet link";
     }
     if (!formData.discordUsername) {
-      errors.discordUsername = "Enter a valid Discord username";
+      errors.discordUsername = "Enter a valid Telegram username";
     }
 
     setFormErrors(errors);

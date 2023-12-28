@@ -141,7 +141,7 @@ function Task({ referrals, setReferrals }) {
         <div className="w-full md:w-1/2">
           <form className="flex flex-col rounded-lg border-4  p-6">
             <label className="mb-2 text-lg font-bold  text-blue-600 underline">
-              <a href="https://x.com/CrazyFrog_sol" target="_blanck">
+              <a href="https://x.com/CrazyFrog_s0l" target="_blanck">
                 Follow on X
               </a>
             </label>
@@ -160,7 +160,7 @@ function Task({ referrals, setReferrals }) {
             )}
 
             <label className="mb-2 text-lg font-bold  text-blue-600 underline">
-              <a href="https://x.com/CrazyFrog_sol" target="_blanck">
+              <a href="https://x.com/CrazyFrog_s0l" target="_blanck">
                 Repost pinned post
               </a>
             </label>
